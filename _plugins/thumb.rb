@@ -5,6 +5,12 @@ require 'fileutils'
 require 'rake'
 require 'RMagick'
 
+def thumbname(file)
+  ext = File.extname(file)
+  base = /(.*)#{ext}/.match(file)[1]
+  "#{base}-thumb#{ext}"
+end
+
 module Jekyll
 
   class GeneratedFile < StaticFile
@@ -15,10 +21,8 @@ module Jekyll
 
   class ThumbnailGenerator < Generator
     def generate(site)
-      FileList['**/*.{png,jpg,jpeg,gif}'].exclude(/_.*/).each do |file|
-        ext = File.extname(file)
-        base = /(.*)#{ext}/.match(file)[1]
-        thumbfile = "#{base}-thumb#{ext}"
+      FileList["**/*.{png,jpg,jpeg,gif}"].exclude(/_.*/).each do |file|
+        thumbfile = thumbname(file)
 
         # Prevent Jekyll from deleting the thumbnail.
         site.static_files << GeneratedFile.new(site, site.source, File.dirname(thumbfile), File.basename(thumbfile))
