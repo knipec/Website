@@ -2,4 +2,14 @@
 layout: default
 ---
 
-{{ content }}
+<div class="gallery-page">
+  <div class="info">
+    <h1>Carissa Knipe</h1>
+    <h2>{{ page.title }}</h2>
+    {{ page.description }}
+  </div>
+
+  <div class="gallery">
+    {{ content }}
+  </div>
+</div>

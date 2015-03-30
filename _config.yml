@@ -1,0 +1,6 @@
+gallerytag:
+    dir: painting-and-drawing
+    url: /painting-and-drawing
+    thumb_width: 150
+    thumb_height: 150
+    columns: 4
