@@ -21,7 +21,12 @@ module Jekyll
 
   class ThumbnailGenerator < Generator
     def generate(site)
-      FileList["**/*.{png,jpg,jpeg,gif}"].exclude(/_.*/).each do |file|
+      config = site.config['thumbnails'] || {}
+      width = config['width'] || 256
+      height = config['height'] || 256
+
+      FileList['**/*.{png,jpg,jpeg,gif}'].exclude(/^_/).each do |file|
+        puts file
         thumbfile = thumbname(file)
 
         # Prevent Jekyll from deleting the thumbnail.
@@ -32,7 +37,7 @@ module Jekyll
         if !File.exists?(dest) || File.mtime(dest) < File.mtime(file)
           puts "Generating #{thumbfile}..."
           img = Magick::Image.read(file).first
-          thumb = img.resize_to_fill!(150, 150)
+          thumb = img.resize_to_fill!(width, height)
           FileUtils.mkdir_p(File.dirname(dest))
           thumb.write(dest)
           thumb.destroy!
