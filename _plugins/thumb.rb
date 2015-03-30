@@ -18,8 +18,12 @@ module Jekyll
       FileList['**/*.{png,jpg,jpeg,gif}'].exclude(/_.*/).each do |file|
         ext = File.extname(file)
         base = /(.*)#{ext}/.match(file)[1]
-        thumbfile = base + "-thumb" + ext
+        thumbfile = "#{base}-thumb#{ext}"
+
+        # Prevent Jekyll from deleting the thumbnail.
         site.static_files << GeneratedFile.new(site, site.source, File.dirname(thumbfile), File.basename(thumbfile))
+
+        # Regenerate thumbnail if necessary.
         dest = "#{site.dest}/#{thumbfile}"
         if !File.exists?(dest) || File.mtime(dest) < File.mtime(file)
           puts "Generating #{thumbfile}..."
