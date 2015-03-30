@@ -26,7 +26,6 @@ module Jekyll
       height = config['height'] || 256
 
       FileList['**/*.{png,jpg,jpeg,gif}'].exclude(/^_/).each do |file|
-        puts file
         thumbfile = thumbname(file)
 
         # Prevent Jekyll from deleting the thumbnail.
