@@ -1,10 +1,22 @@
+require 'fastimage'
+
 module Jekyll
 
   class Gallery < Liquid::Block
     def render(context)
-      @nodelist[0].lines.map(&:strip).reject(&:empty?).map{|line|
-        image, decsription = line.split("=").map(&:strip)
-        "<img src='#{thumbname(image)}' alt='#{decsription}'>"
+      @nodelist[0].lines.map(&:strip).reject(&:empty?).each_with_index.map{|line, index|
+        image, description = line.split("=").map(&:strip)
+        image_path = File.dirname(context.environments.first["page"]["path"]) + "/" + image
+        width, height = FastImage.size(image_path)
+
+        "<img" \
+        " src='#{thumbname(image)}'" \
+        " data-src='#{image}'" \
+        " data-index='#{index}'" \
+        " data-width=#{width}" \
+        " data-height=#{height}" \
+        " data-desc='#{description}'" \
+        ">"
       }.join("\n")
     end
   end
