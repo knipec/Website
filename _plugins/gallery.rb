@@ -5,7 +5,7 @@ module Jekyll
   class Gallery < Liquid::Block
     def render(context)
       @nodelist[0].lines.map(&:strip).reject(&:empty?).each_with_index.map{|line, index|
-        image, description = line.split("=").map(&:strip)
+        image, caption = line.split("=").map(&:strip)
         image_path = File.dirname(context.environments.first["page"]["path"]) + "/" + image
         width, height = FastImage.size(image_path)
 
@@ -15,7 +15,7 @@ module Jekyll
         " data-index='#{index}'" \
         " data-width=#{width}" \
         " data-height=#{height}" \
-        " data-desc='#{description}'" \
+        " data-caption='#{caption}'" \
         ">"
       }.join("\n")
     end

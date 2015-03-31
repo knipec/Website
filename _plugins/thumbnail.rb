@@ -36,7 +36,7 @@ module Jekyll
         if !File.exists?(dest) || File.mtime(dest) < File.mtime(file)
           puts "Generating #{thumbfile}..."
           img = Magick::Image.read(file).first
-          thumb = img.resize_to_fill!(width, height)
+          thumb = img.resize_to_fit!(width, height)
           FileUtils.mkdir_p(File.dirname(dest))
           thumb.write(dest)
           thumb.destroy!
