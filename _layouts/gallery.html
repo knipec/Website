@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<div class="gallery-page">
-  <div class="info">
+<div class="gallery-page container-fluid">
+  <div id="info" class="col-sm-4">
     <h1>Carissa Knipe</h1>
-    <h2>{{ page.title }}</h2>
+    <h3>{{ page.title }}</h3>
     {{ page.description }}
   </div>
 
-  <div class="gallery">
+  <div id="body" class="col-sm-8">
     {{ content }}
   </div>
 </div>
