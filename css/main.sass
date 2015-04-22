@@ -45,33 +45,22 @@ nav
   ol
     list-style: none
     padding: 0
-
-nav
+  a
+    color: #ccc
+    font-size: 90%
+    transition: 0.2s
+    &:hover
+      color: rgb(226,221,189)
+      text-decoration: none
   > ol
     display: table
     width: 100%
     margin: 10px 0
     > li
-      position: relative
       display: table-cell
       width: 1/6 * 100%
       text-align: center
       > a
         text-transform: uppercase
       > ol
-        position: absolute
-        bottom: 1.2em
-        background: black
-        display: none
-        padding-bottom: 1em
-        > li
-          padding: 0.5em 1em
-
-nav
-  a
-    color: #ccc
-    font-size: 90%
-    transition: 0.5s
-    &:hover
-      color: rgb(226,221,189)
-      text-decoration: none
+        padding-top: 0.5em
