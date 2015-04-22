@@ -26,25 +26,52 @@ h3
   background: rgb(189,202,207)
   padding: 15px 0
 
-.gallery-page
   .info
     padding: 80px 20px
   .gallery
-    img
+    .imgwrapper
+      display: inline-block
       width: 128px
       margin: 5px
+      background: black
+      img
+        width: 128px
+        transition: 0.5s
+        &:hover
+          cursor: pointer
+          opacity: 0.8
 
 nav
-  display: table
-  width: 100%
-  margin: 10px 0
+  ol
+    list-style: none
+    padding: 0
+
+nav
+  > ol
+    display: table
+    width: 100%
+    margin: 10px 0
+    > li
+      position: relative
+      display: table-cell
+      width: 1/6 * 100%
+      text-align: center
+      > a
+        text-transform: uppercase
+      > ol
+        position: absolute
+        bottom: 1.2em
+        background: black
+        display: none
+        padding-bottom: 1em
+        > li
+          padding: 0.5em 1em
+
+nav
   a
-    display: table-cell
-    width: 1/6 * 100%
-    text-align: center
     color: #ccc
-    text-transform: uppercase
     font-size: 90%
+    transition: 0.5s
     &:hover
       color: rgb(226,221,189)
       text-decoration: none
