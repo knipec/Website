@@ -30,4 +30,4 @@
     jekyll serve
     ```
 
-3.  Visit http://localhost:4000
+3.  Visit [http://localhost:4000](http://localhost:4000)
