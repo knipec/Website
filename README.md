@@ -29,3 +29,5 @@
     ```sh
     jekyll serve
     ```
+
+3.  Visit http://localhost:4000
