@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Graphics</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- PhotoSwipe -->
+    <link rel="stylesheet" href="/lib/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.css">
+    <script src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="/lib/animate/animate.min.css">
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <h1 class="carissa">Carissa Knipe</h1>
+    </div>
+    <nav>
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/painting-and-drawing">Painting & Drawing</a></li>
+    <li><a href="/printmaking">Printmaking</a></li>
+    <li><a href="/graphics">Graphics</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ol>
+</nav>
+
+    <div class="wrapper container-fluid">
+      <div class="info col-sm-4">
+  <h2>Graphics</h2>
+  <h3></h3>
+  
+</div>
+
+<div class="col-sm-8">
+  <div class='gallery'><span class='imgwrapper'>  <img   src='experimentalfont-thumb.jpg'   data-src='experimentalfont.jpg'   data-index='0'   data-width=1920   data-height=2485   data-caption=''  ></span>
+<span class='imgwrapper'>  <img   src='Vole-cano-thumb.png'   data-src='Vole-cano.png'   data-index='1'   data-width=1464   data-height=1464   data-caption=''  ></span>
+<span class='imgwrapper'>  <img   src='andy-thumb.png'   data-src='andy.png'   data-index='2'   data-width=1400   data-height=1400   data-caption=''  ></span>
+<span class='imgwrapper'>  <img   src='otter-thumb.jpg'   data-src='otter.jpg'   data-index='3'   data-width=1920   data-height=1080   data-caption=''  ></span>
+<span class='imgwrapper'>  <img   src='musicshirt-fixNotJPG-thumb.jpg'   data-src='musicshirt-fixNotJPG.jpg'   data-index='4'   data-width=584   data-height=453   data-caption=''  ></span>
+<span class='imgwrapper'>  <img   src='six-word-memoir-thumb.jpg'   data-src='six-word-memoir.jpg'   data-index='5'   data-width=4080   data-height=5426   data-caption=''  ></span>
+<span class='imgwrapper'>  <img   src='2013CSshirt-thumb.png'   data-src='2013CSshirt.png'   data-index='6'   data-width=584   data-height=268   data-caption=''  ></span>
+<span class='imgwrapper'>  <img   src='2014CSshirt-thumb.png'   data-src='2014CSshirt.png'   data-index='7'   data-width=505   data-height=545   data-caption=''  ></span></div>
+
+</div>
+
+<!-- Include PhotoSwipe stuff. -->
+<!-- Copied from http://photoswipe.com/documentation/getting-started.html -->
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+  var photos = $('.gallery img').map(function() {
+    return {
+      src: $(this).attr('data-src'),
+      w: $(this).attr('data-width'),
+      h: $(this).attr('data-height'),
+      msrc: $(this).attr('src'),
+      title: $(this).attr('data-caption'),
+    }
+  })
+
+  $('.gallery img').on('click', function() {
+    var options = {
+      index: $(this).attr('data-index'),
+      getThumbBoundsFn: function(index) {
+        var rect = $('.gallery img')[index].getBoundingClientRect()
+        return {
+          x: rect.left + window.scrollX,
+          y: rect.top + window.scrollY,
+          w: rect.width,
+        }
+      },
+    }
+    new PhotoSwipe($('.pswp')[0], PhotoSwipeUI_Default, photos, options).init()
+  })
+</script>
+
+
+
+  </body>
+</html>
