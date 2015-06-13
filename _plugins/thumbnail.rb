@@ -3,7 +3,6 @@
 
 require 'fileutils'
 require 'rake'
-require 'RMagick'
 
 def thumbname(file)
   ext = File.extname(file)
@@ -34,12 +33,10 @@ module Jekyll
         # Regenerate thumbnail if necessary.
         dest = "#{site.dest}/#{thumbfile}"
         if !File.exists?(dest) || File.mtime(dest) < File.mtime(file)
-          puts "Generating #{thumbfile}..."
-          img = Magick::Image.read(file).first
-          thumb = img.resize_to_fill!(width, height)
+          # Generate the thumbnail.
+          puts "Regenerating #{thumbfile}..."
           FileUtils.mkdir_p(File.dirname(dest))
-          thumb.write(dest)
-          thumb.destroy!
+          `convert "#{file}" -thumbnail 256x256^ -gravity center -extent 256x256 "#{dest}"`
         end
       end
     end
