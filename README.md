@@ -25,9 +25,18 @@
     cd Website
     ```
 
-2.  Start Jekyll's test server:
+2.  You will do all your development in the `source` branch. Switch to it with:
+    ```sh
+    git checkout source
+    ```
+
+3.  Start Jekyll's test server:
     ```sh
     jekyll serve
     ```
 
-3.  Visit [http://localhost:4000](http://localhost:4000)
+4.  Visit [http://localhost:4000](http://localhost:4000)
+
+## Publishing
+
+To publish to the live site, run the `push` script from the `source` branch.

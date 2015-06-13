@@ -7,7 +7,7 @@ commit=`git rev-parse HEAD`
 
 git checkout master || exit
 exclude_flags="--exclude=${exclude// / --exclude=}"
-rsync -rl --exclude='*.md' _site/* . || exit
+rsync -rlv --exclude='*.md' _site/* . || exit
 git add --all . || exit
 git commit -m "Generated from $commit"
 git push || exit
