@@ -11,9 +11,9 @@
     brew install imagemagick pkg-config ruby
     ```
 
-3.  Install [FastImage](https://github.com/sdsykes/fastimage), [Jekyll](http://jekyllrb.com/), and [RMagick](https://github.com/rmagick/rmagick):
+3.  Install [FastImage](https://github.com/sdsykes/fastimage) and [Jekyll](http://jekyllrb.com/):
     ```sh
-    sudo gem install fastimage github-pages jekyll rmagick
+    sudo gem install fastimage jekyll
     ```
 
 ### Start Jekyll
