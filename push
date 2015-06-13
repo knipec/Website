@@ -1,2 +1,10 @@
 #!/bin/sh
 
+cd "`dirname "$0"`"
+
+jekyll build || exit
+
+git checkout master || exit
+rsync _site/* . || exit
+
+git checkout source
