@@ -3,12 +3,13 @@
 cd "`dirname "$0"`"
 
 jekyll build || exit
+commit=`git rev-parse HEAD`
 
 git checkout master || exit
 exclude_flags="--exclude=${exclude// / --exclude=}"
 rsync -rl --exclude='*.md' _site/* . || exit
 git add --all . || exit
-git commit || exit
+git commit -m "Generated from $commit"
 git push || exit
 
 git checkout source || exit
