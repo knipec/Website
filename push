@@ -5,7 +5,8 @@ cd "`dirname "$0"`"
 jekyll build || exit
 
 git checkout master || exit
-rsync -rl _site/* . || exit
+exclude_flags="--exclude=${exclude// / --exclude=}"
+rsync -rl --exclude='.git*' --exclude='*.md' _site/* . || exit
 git add --all . || exit
 git commit || exit
 git push || exit
