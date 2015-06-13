@@ -13,7 +13,7 @@
 
 3.  Install [FastImage](https://github.com/sdsykes/fastimage), [Jekyll](http://jekyllrb.com/), and [RMagick](https://github.com/rmagick/rmagick):
     ```sh
-    sudo gem install fastimage jekyll rmagick
+    sudo gem install fastimage github-pages jekyll rmagick
     ```
 
 ### Start Jekyll

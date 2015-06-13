@@ -1,8 +1,13 @@
 ---
 ---
+$back-color: rgb(25, 30, 30)
+$wrapper-color: rgb(190, 210, 220)
+$gray-color: rgb(180, 180, 180)
+$nav-color: rgb(230, 230, 230)
+$nav-color-darker: rgb(70, 100, 130) 
 
 body
-  background: black
+  background: $back-color
   min-width: 480px
   max-width: 960px
   margin: 0 auto
@@ -16,14 +21,30 @@ h1, h2, h3
   text-align: center
   text-transform: uppercase
 h1
-  font-size: 27px
+  font-size: 30px
   font-weight: normal
-h3
-  font-size: 15px
+  letter-spacing: 1em
+h2
+  font-size: 26px
   font-weight: bold
+h3
+  font-size: 20px
+  font-weight: normal
+  letter-spacing: 5px
+
+ul
+  padding: 0
+
+li
+  list-style-position: outside
+
+h1.carissa
+  text-align: right
+  padding-left: 15px
+  color: $nav-color
 
 .wrapper
-  background: rgb(189,202,207)
+  background: $wrapper-color
   padding: 15px 0
 
   .info
@@ -40,17 +61,21 @@ h3
         &:hover
           cursor: pointer
           opacity: 0.8
+  .larger-text
+    text-align: center
+    font-size: 14px
+    font-weight: bold
 
 nav
   ol
     list-style: none
     padding: 0
   a
-    color: #ccc
+    color: $nav-color
     font-size: 90%
     transition: 0.2s
     &:hover
-      color: rgb(226,221,189)
+      color: $nav-color-darker
       text-decoration: none
   > ol
     display: table
