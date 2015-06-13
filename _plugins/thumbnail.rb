@@ -36,7 +36,7 @@ module Jekyll
           # Generate the thumbnail.
           puts "Regenerating #{thumbfile}..."
           FileUtils.mkdir_p(File.dirname(dest))
-          `convert "#{file}" -thumbnail 256x256^ -gravity center -extent 256x256 "#{dest}"`
+          `convert "#{file}" -thumbnail 256x256^ -gravity center -extent 256x256 -strip "#{dest}"`
         end
       end
     end
