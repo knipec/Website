@@ -5,6 +5,9 @@ cd "`dirname "$0"`"
 jekyll build || exit
 
 git checkout master || exit
-rsync _site/* . || exit
+rsync -a _site/* . || exit
+git add --all . || exit
+git commit || exit
+git push || exit
 
-git checkout source
+git checkout source || exit
