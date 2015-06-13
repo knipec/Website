@@ -6,9 +6,10 @@ jekyll build || exit
 
 git checkout master || exit
 exclude_flags="--exclude=${exclude// / --exclude=}"
-rsync -rl --exclude='.git*' --exclude='*.md' _site/* . || exit
+rsync -rl --exclude='*.md' _site/* . || exit
 git add --all . || exit
 git commit || exit
 git push || exit
 
 git checkout source || exit
+git push || exit
