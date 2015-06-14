@@ -171,7 +171,7 @@
 
   $('.gallery img').on('click', function() {
     var options = {
-      index: $(this).attr('data-index'),
+      index: Number($(this).attr('data-index')),
       getThumbBoundsFn: function(index) {
         var rect = $('.gallery img')[index].getBoundingClientRect()
         return {
@@ -180,6 +180,10 @@
           w: rect.width,
         }
       },
+      showHideOpacity: true,
+      // // Disable animations
+      // hideAnimationDuration: 0,
+      // showAnimationDuration: 0,
     }
     new PhotoSwipe($('.pswp')[0], PhotoSwipeUI_Default, photos, options).init()
   })

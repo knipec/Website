@@ -81,3 +81,19 @@ nav > ol {
       text-transform: uppercase; }
     nav > ol > li > ol {
       padding-top: 0.5em; }
+
+.metagallery {
+  font-size: 0; }
+  .metagallery a {
+    display: inline-block;
+    position: relative;
+    margin: 3px;
+    text-align: center;
+    font-size: 10pt; }
+    .metagallery a .caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 6px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #ddd; }
