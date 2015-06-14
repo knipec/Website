@@ -1,10 +1,11 @@
 ---
 ---
+
 $back-color: rgb(25, 30, 30)
 $wrapper-color: rgb(190, 210, 220)
 $gray-color: rgb(180, 180, 180)
 $nav-color: rgb(230, 230, 230)
-$nav-color-darker: rgb(70, 100, 130) 
+$nav-color-darker: rgb(70, 100, 130)
 
 body
   background: $back-color
@@ -89,3 +90,19 @@ nav
         text-transform: uppercase
       > ol
         padding-top: 0.5em
+
+.metagallery
+  font-size: 0
+  a
+    display: inline-block
+    position: relative
+    margin: 3px
+    text-align: center
+    font-size: 10pt
+    .caption
+      position: absolute
+      bottom: 0
+      width: 100%
+      padding: 6px
+      background: rgba(0,0,0,0.5)
+      color: #ddd
