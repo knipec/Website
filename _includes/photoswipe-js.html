@@ -11,7 +11,7 @@
 
   $('.gallery img').on('click', function() {
     var options = {
-      index: $(this).attr('data-index'),
+      index: Number($(this).attr('data-index')),
       getThumbBoundsFn: function(index) {
         var rect = $('.gallery img')[index].getBoundingClientRect()
         return {
