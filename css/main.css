@@ -38,27 +38,6 @@ h1.carissa {
   padding-left: 15px;
   color: #e6e6e6; }
 
-.wrapper {
-  background: #bed2dc;
-  padding: 15px 0; }
-  .wrapper .info {
-    padding: 80px 20px; }
-  .wrapper .gallery .imgwrapper {
-    display: inline-block;
-    width: 128px;
-    margin: 5px;
-    background: black; }
-    .wrapper .gallery .imgwrapper img {
-      width: 128px;
-      transition: 0.5s; }
-      .wrapper .gallery .imgwrapper img:hover {
-        cursor: pointer;
-        opacity: 0.8; }
-  .wrapper .larger-text {
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold; }
-
 nav ol {
   list-style: none;
   padding: 0; }
@@ -82,18 +61,40 @@ nav > ol {
     nav > ol > li > ol {
       padding-top: 0.5em; }
 
-.metagallery {
+.wrapper {
+  background: #bed2dc;
+  padding: 15px 0; }
+  .wrapper .info {
+    padding: 80px 20px; }
+  .wrapper .larger-text {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold; }
+
+.gallery {
   font-size: 0; }
-  .metagallery a {
+  .gallery .gallery-image {
     display: inline-block;
     position: relative;
-    margin: 3px;
+    width: 128px;
     text-align: center;
+    margin: 5px;
+    background: black; }
+    .gallery .gallery-image img {
+      transition: 0.5s;
+      width: 100%; }
+    .gallery .gallery-image:hover {
+      cursor: pointer; }
+      .gallery .gallery-image:hover img {
+        opacity: 0.8; }
+  .gallery .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ddd;
     font-size: 10pt; }
-    .metagallery a .caption {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 6px;
-      background: rgba(0, 0, 0, 0.5);
-      color: #ddd; }
+
+.large-gallery .gallery-image {
+  width: 256px; }
