@@ -13,7 +13,7 @@ module Jekyll
         image_path = "#{page}#{image}"
         width, height = FastImage.size(image_path)
 
-        "<span class='imgwrapper'>" \
+        "<a class='gallery-image'>" \
         "  <img" \
         "   src='#{thumbname(image)}'" \
         "   data-src='#{image}'" \
@@ -22,7 +22,7 @@ module Jekyll
         "   data-height=#{height}" \
         "   data-caption='#{caption}'" \
         "  >" \
-        "</span>"
+        "</a>"
       }.join("\n")
 
       return "<div class='gallery'>#{images}</div>"

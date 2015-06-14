@@ -7,13 +7,14 @@ module Jekyll
         thumbnail, caption = line.split("=").map(&:strip)
         path = thumbnail.split("/")[0..-2].join("/")
 
-        "<a href=#{path}>" \
+
+        "<a href=#{path} class='gallery-image' >" \
         "  <img src='#{thumbnail}'>" \
         "  <div class='caption'>#{caption}</div>" \
         "</a>"
       }.join("\n")
 
-      return "<div class='metagallery'>#{links}</div>"
+      return "<div class='gallery large-gallery'>#{links}</div>"
     end
   end
 

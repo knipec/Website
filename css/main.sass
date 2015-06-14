@@ -44,29 +44,6 @@ h1.carissa
   padding-left: 15px
   color: $nav-color
 
-.wrapper
-  background: $wrapper-color
-  padding: 15px 0
-
-  .info
-    padding: 80px 20px
-  .gallery
-    .imgwrapper
-      display: inline-block
-      width: 128px
-      margin: 5px
-      background: black
-      img
-        width: 128px
-        transition: 0.5s
-        &:hover
-          cursor: pointer
-          opacity: 0.8
-  .larger-text
-    text-align: center
-    font-size: 14px
-    font-weight: bold
-
 nav
   ol
     list-style: none
@@ -91,18 +68,42 @@ nav
       > ol
         padding-top: 0.5em
 
-.metagallery
+.wrapper
+  background: $wrapper-color
+  padding: 15px 0
+
+  .info
+    padding: 80px 20px
+  .larger-text
+    text-align: center
+    font-size: 14px
+    font-weight: bold
+
+.gallery
   font-size: 0
-  a
+  .gallery-image
     display: inline-block
     position: relative
-    margin: 3px
+    width: 128px
     text-align: center
-    font-size: 10pt
-    .caption
-      position: absolute
-      bottom: 0
+    margin: 5px
+    background: black
+    img
+      transition: 0.5s
       width: 100%
-      padding: 6px
-      background: rgba(0,0,0,0.5)
-      color: #ddd
+    &:hover
+      cursor: pointer
+      img
+        opacity: 0.8
+  .caption
+    position: absolute
+    bottom: 0
+    width: 100%
+    padding: 6px
+    background: rgba(0,0,0,0.5)
+    color: #ddd
+    font-size: 10pt
+
+.large-gallery
+  .gallery-image
+    width: 256px
