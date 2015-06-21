@@ -4,9 +4,8 @@ module Jekyll
     def render(context)
       links = @nodelist[0].lines.map(&:strip).reject(&:empty?)
                           .each_with_index.map{|line, index|
-        thumbnail, caption = line.split("=").map(&:strip)
-        path = thumbnail.split("/")[0..-2].join("/")
-
+        thumbnail_and_path, caption = line.split("=").map(&:strip)
+        thumbnail, path = thumbnail_and_path.split("->").map(&:strip)
 
         "<a href=#{path} class='gallery-image' >" \
         "  <img src='#{thumbnail}'>" \
