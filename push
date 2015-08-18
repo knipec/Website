@@ -2,6 +2,11 @@
 
 cd "`dirname "$0"`"
 
+git status | grep "Changes not staged for commit:" > /dev/null \
+&& echo "$(tput bold)$(tput setaf 1)ERROR: Cannot commit. You have uncommitted changes:$(tput sgr0)"\
+&& git status \
+&& exit
+
 jekyll build || exit
 commit=`git rev-parse HEAD`
 
