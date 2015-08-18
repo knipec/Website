@@ -41,17 +41,18 @@
 
 Make all changes in the `source` branch. When you are ready to publish to the live site:
 
-1.  Run
+1.  Stage your changes and check what you're about to commit:
     ```sh
     git add --all .
     git status
     ```
-    to stage your changes and check what you're about to commit.
 
-2.  If that looks good, run
+2.  If that looks good, commit your changes:
     ```sh
     git commit -m "..."
     ```
-    to commit your changes.
 
-3.  Run the `push` script in the main directory to upload to Github and push to the live site.
+3.  And finally push changes to Github and the live site:
+    ```sh
+    ./push
+    ```
