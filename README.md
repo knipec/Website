@@ -40,6 +40,7 @@
 ## Publishing
 
 Make all changes in the `source` branch. When you are ready to publish to the live site:
+
 1.  Run
     ```sh
     git add --all .; and git status
