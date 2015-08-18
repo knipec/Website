@@ -39,4 +39,17 @@
 
 ## Publishing
 
-To publish to the live site, run the `push` script from the `source` branch.
+Make all changes in the `source` branch. When you are ready to publish to the live site:
+1.  Run
+    ```sh
+    git add --all .; and git status
+    ```
+    to stage your changes and check what you're about to commit.
+
+2.  If that looks good, run
+    ```sh
+    git commit -m "..."
+    ```
+    to commit your changes.
+
+3.  Run the `push` script in the main directory to upload to Github and push to the live site.
