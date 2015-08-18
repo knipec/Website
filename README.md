@@ -43,7 +43,8 @@ Make all changes in the `source` branch. When you are ready to publish to the li
 
 1.  Run
     ```sh
-    git add --all .; and git status
+    git add --all .
+    git status
     ```
     to stage your changes and check what you're about to commit.
 
