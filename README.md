@@ -30,12 +30,14 @@
     git checkout source
     ```
 
-3.  Start Jekyll's test server:
+### Making Changes
+1.  Start Jekyll's test server:
     ```sh
     jekyll serve
     ```
+2. Never make changes to _site; it is generated. To change thumbnails, create the 256px by 256px thumbnail image file alongside the original full-sized file and append "-thumb" to its name.
 
-4.  Visit [http://localhost:4000](http://localhost:4000)
+3.  Visit [http://localhost:4000](http://localhost:4000)
 
 ## Publishing
 
