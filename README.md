@@ -31,6 +31,7 @@
     ```
 
 ### Making Changes
+
 1.  Start Jekyll's test server:
     ```sh
     jekyll serve
