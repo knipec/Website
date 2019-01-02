@@ -59,3 +59,7 @@ Make all changes in the `source` branch. When you are ready to publish to the li
     ```sh
     ./push
     ```
+
+## References
+
+* [Github Pages](https://pages.github.com/)

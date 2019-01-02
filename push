@@ -8,15 +8,15 @@ git status | grep "Changes to be committed:\|Changes not staged for commit:\|Unt
 && exit 1
 
 jekyll build
-commit="$(git rev-parse HEAD)"
-tmp="$(mktemp -d)"
-mv _site/* "$tmp"
+COMMIT="$(git rev-parse HEAD)"
+TMP="$(mktemp -d)"
+mv _site/* $TMP
 
 git checkout master
 rm -r *
-mv "$tmp/*" .
+mv $TMP/* .
 git add --all .
-git commit -m "Generated from $commit"
+git commit -m "Generated from $COMMIT"
 git push
 
 git checkout source
