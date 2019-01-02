@@ -1,21 +1,24 @@
-#!/bin/sh
+#!/bin/bash -e
 
-cd "`dirname "$0"`"
+cd "$(dirname "$0")"
 
 git status | grep "Changes to be committed:\|Changes not staged for commit:\|Untracked files:" > /dev/null \
 && echo "$(tput bold)$(tput setaf 1)ERROR: Cannot commit. You have uncommitted changes:$(tput sgr0)"\
 && git status \
-&& exit
+&& exit 1
 
-jekyll build || exit
-commit=`git rev-parse HEAD`
+jekyll build
+commit="$(git rev-parse HEAD)"
+tmp="$(mktemp -d)"
+mv _site/* "$tmp"
 
-git checkout master || exit
-exclude_flags="--exclude=${exclude// / --exclude=}"
-rsync -rlv --exclude='*.md' _site/* . || exit
-git add --all . || exit
+git checkout master
+rm -r *
+mv "$tmp/*" .
+git checkout source -- CNAME README.md
+git add --all .
 git commit -m "Generated from $commit"
-git push || exit
+git push
 
-git checkout source || exit
-git push || exit
+git checkout source
+git push
