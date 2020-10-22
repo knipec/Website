@@ -62,6 +62,7 @@ Make all changes in the `source` branch. When you are ready to publish to the li
 
 ## Notes
 - Certain special characters are problems, like apostrophes in gallery image descriptions
+- \_includes/nav.html is where the menu on the top is stored
 
 ## References
 
