@@ -60,6 +60,9 @@ Make all changes in the `source` branch. When you are ready to publish to the li
     ./push
     ```
 
+## Notes
+- Certain special characters are problems, like apostrophes in gallery image descriptions
+
 ## References
 
 * [Github Pages](https://pages.github.com/)
