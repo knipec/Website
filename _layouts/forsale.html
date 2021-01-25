@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="info col-sm-4">
+  <h2>{{ page.title }}</h2>
+  <h3>{{ page.subtitle }}</h3>
+  {{ page.description }}
+</div>
+
+<div class="col-sm-8">
+  {{ content }}
+</div>
+
+<!-- Include PhotoSwipe stuff. -->
+{% include photoswipe.html %}
+{% include photoswipe-js.html %}
