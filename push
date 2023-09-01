@@ -21,3 +21,8 @@ git push
 
 git checkout source
 git push
+
+# Issues:
+# - If something fails due to known_hosts weirdness (what's up with that?)
+#   this script will end before checkout-ing source
+#   and running a second time in source will say master is up to date, nothing to commit
