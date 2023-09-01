@@ -1,66 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello :)</title>
+---
+layout: metagallery
+title: Hello :)
+---
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <!-- PhotoSwipe -->
-    <link rel="stylesheet" href="/lib/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.css">
-    <script src="/lib/photoswipe/photoswipe.min.js"></script>
-    <script src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
-
-    <!-- Custom -->
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  <body>
-    <h1 class="carissa">Carissa Knipe</h1>
-    </div>
-    <nav>
-  <ol>
-    <li><a href="/">Home</a></li>
-    <li><a href="/art">Art</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/forsale">For Sale</a></li>
-  </ol>
-</nav>
-
-    <div class="wrapper container-fluid">
-      <div class="col-sm-12">
-  <h2>Hello :)</h2>
-  <h3></h3>
-  
-  <br>
-  <center>
-  <div class='gallery large-gallery'><a href=art class='gallery-image' >  <img src='art/projects/south-pacific/IMG_2440-thumb.jpg'>  <div class='caption'>Art</div></a>
-<a href=about class='gallery-image' >  <img src='about/self-portrait-thumb.jpg'>  <div class='caption'>About</div></a>
-<a href=contact class='gallery-image' >  <img src='contact/contact-thumb.png'>  <div class='caption'>Contact</div></a>
-<a href=forsale class='gallery-image' >  <img src='forsale/MutualAid.png'>  <div class='caption'>For Sale!</div></a></div>
-  </center>
-</div>
-
-<!--
-<div class="info col-sm-4">
-  <h2>Hello :)</h2>
-  <h3></h3>
-  
-</div>
-
-<div class="col-sm-8">
-  <div class='gallery large-gallery'><a href=art class='gallery-image' >  <img src='art/projects/south-pacific/IMG_2440-thumb.jpg'>  <div class='caption'>Art</div></a>
-<a href=about class='gallery-image' >  <img src='about/self-portrait-thumb.jpg'>  <div class='caption'>About</div></a>
-<a href=contact class='gallery-image' >  <img src='contact/contact-thumb.png'>  <div class='caption'>Contact</div></a>
-<a href=forsale class='gallery-image' >  <img src='forsale/MutualAid.png'>  <div class='caption'>For Sale!</div></a></div>
-</div>
--->
-
-  </body>
-</html>
+{% metagallery %}
+art/projects/south-pacific/IMG_2440-thumb.jpg -> art = Art
+about/self-portrait-thumb.jpg -> about = About
+contact/contact-thumb.png -> contact = Contact
+forsale/MutualAid.png -> forsale = For Sale!
+{% endmetagallery %}
